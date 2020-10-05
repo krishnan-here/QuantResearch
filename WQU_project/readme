@@ -1,1 +1,33 @@
+VIX_fut-data_scraping: 
+
+Description:
+
+1. Downloads the VIX futures prices from CBOE starting from the inception date (in Nov-2004) to last business day. 
+2. Calculates the 1M/2M/3M/4M constant maturity VIX futures index. 
+3. Calculated the medium term VIX futures index in which positions in 4th month is rolled into 7th month contract every business day, with constant position in 5th month and 6 month contracts.
+4. Calculates and displays analytics on shape of the VIX futures curve on different dates, spot VIX index etc.
+5. Downloads the VSTOXX short and mid term futures index levels directly from STOXX website.
+6. All VIX and comparison index levels are pickled so that they can be later in 'VIX analysis' script.
+
+Dependencies: VIX-expirationdts.xlsx
+
+VIX analysis:
+
+Description:
+
+1. Unpickles the calculated VIX index as well other comparison index levels.
+2. Calculated rolling beta and correlations between SPX/STOXX and spot VIX/VSTOXX and VIX futures indices.
+3. Creates monthly rebalanced  multi asset portfolios with combination of equity , bonds, gold and VIX futures indices or ETFs.
+4. Displays and stores backtest results. Backtest performance metrics are collated in the "PerformanceStats" module.
+
+Dependencies: EURIBOR.csv and PerformanceStats
+
+Notes:
+'Path' should be set to working directory which has all the files.
+"Datapath" should kept same as the "Path" above or the location where EURIBOR.csv is located.
+Finally, "outputpath" should be set to the location where the results of the backtests should be stores.
+Pickle files are necessary for executing 'VIX analysis'. For this, VIX_fut-data-scraping should be run atleast once before.
+
+
+
 
