@@ -16,7 +16,7 @@ VIX analysis:
 Description:
 
 1. Unpickles the calculated VIX index as well other comparison index levels.
-2. Calculated rolling beta and correlations between SPX/STOXX and spot VIX/VSTOXX and VIX futures indices.
+2. Calculates rolling beta and correlations between SPX/STOXX and spot VIX/VSTOXX and VIX futures indices. The 'Region' swtich should be set to either 'US' or 'EUR'.
 3. Creates monthly rebalanced  multi asset portfolios with combination of equity , bonds, gold and VIX futures indices or ETFs.
 4. Displays and stores backtest results. Backtest performance metrics are collated in the "PerformanceStats" module.
 
