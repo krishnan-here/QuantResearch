@@ -9,7 +9,7 @@ Description:
 5. Downloads the VSTOXX short and mid term futures index levels directly from STOXX website.
 6. All VIX and comparison index levels are pickled so that they can be later in 'VIX analysis' script.
 
-Dependencies: VIX-expirationdts.xlsx
+Dependencies: VIX_expirationdts.xlsx
 
 VIX analysis:
 
