@@ -1,3 +1,9 @@
+To install package dependencies pls set up the virtual environment and download requirements.txt in the same folder.
+In the virtual env, type pip install -r requirements.txt
+
+
+File descriptions:
+
 VIX_fut_data_scraping: 
 
 Description:
