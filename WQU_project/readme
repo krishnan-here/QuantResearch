@@ -25,14 +25,19 @@ Description:
 2. Calculates rolling beta and correlations between SPX/STOXX and spot VIX/VSTOXX and VIX futures indices. The 'Region' swtich should be set to either 'US' or 'EUR'.
 3. Creates monthly rebalanced  multi asset portfolios with combination of equity , bonds, gold and VIX futures indices or ETFs.
 4. Displays and stores backtest results. Backtest performance metrics are collated in the "PerformanceStats" module.
+5. For the last chart (Historical Return vs risk plot), run the snippet at least twice, otherwise the chart will tend to appear small.
 
 Dependencies: EURIBOR.csv and PerformanceStats
 
 Notes:
-'Path' should be set to working directory which has all the files.
+'Path' should be set to working directory which has all the files. It is location where the generated pickle and csv files are to reside.
 "Datapath" should kept same as the "Path" above or the location where EURIBOR.csv is located.
 Finally, "outputpath" should be set to the location where the results of the backtests should be stores.
-Pickle files are necessary for executing 'VIX analysis'. For this, VIX_fut-data-scraping should be run atleast once before.
+Also create manually a folder named "results" in above location.
+Pickle files are necessary for executing 'VIX analysis'. For this, 'VIX_fut-data-scraping' should be run atleast once before.
+But please note that since 'VIX_fut-data-scraping takes a long time to run and download data from cboe website, avoid repeatedly run it, unless absolutely necessary (i.e. no pickles files present or latest data badly needed).
+The folder 'Generated Data' is not required for the code to execute, but contains a quite up-to-date generated version of pickles files, which can also be copied in the 'Path' folder to run 'VIX_analysis' directly without having to run 'VIX_fut-data-scraping'.
+If 'PerformanceStats' fail to import, open 'PerformanceStats.ipynb' on Jupyter Notebook, then download as .py, then copy the downloaded file to the location of 'VIX_analysis.ipynb' and 'VIX_fut_data_scraping.ipynb'.
 
 
 
